@@ -3,6 +3,7 @@ import words from './wordList.json'
 import HangmanDrawing from './HangmanDrawing'
 import HangmanWord from './HangmanWord'
 import Keyboard from './Keyboard'
+import s from './App.module.css'
 
 function getWord() {
   return words[Math.floor(Math.random() * words.length)]
@@ -74,7 +75,7 @@ function App() {
         alignItems: "center",
       }}
     >
-      <div style={{ fontSize: "2rem", textAlign: "center" }}>
+      <div style={{ fontSize: "2rem", textAlign: "center"}} className={s.font}>
         {isWinner && "Winner! - Refresh to try again"}
         {isLoser && "Nice Try - Refresh to try again"}
       </div>
